@@ -1,0 +1,10 @@
+FUNCTION est_palindrome(mot : STRING, i : INTEGER) : BOOLEAN
+BEGIN
+    IF (i >= mot.length) / 2 THEN
+        RETURN TRUE; 
+    ELSE IF (mot[i] = mot[mot.length - 1 - i]) THEN
+        RETURN est_palindrome(mot, i + 1)
+    ELSE
+        RETURN FALSE;
+    END_IF
+END
